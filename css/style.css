@@ -22,7 +22,7 @@ body {
 .my-page-body {
     grid-area: main-body;
     background-color: blue;
-    height: 600px;
+    height: fit-content;
     padding: 10px;
 }
 
