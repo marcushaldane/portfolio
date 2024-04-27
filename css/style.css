@@ -1,44 +1,97 @@
 * {
     box-sizing: border-box;
+    font-weight: lighter;
 }
 
 body {
-    font-family:'Courier New', Courier, monospace;
-    /* font-family: 'Times New Roman', Times, serif; */
+    /* font-family:'Courier New', Courier, monospace; */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+a {
+    color: blue;
+}
+
+ul {
+    padding-left: 0;
 }
 
 .flex-container {
     display: flex;
+    /* flex-wrap: wrap; */
     width: 100%;
+}
+
+.flex-down {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    /* background-color: brown; */
+}
+
+.no-bullets {
+    list-style-type: none;
+}
+
+.jc-sb {
+    justify-content: space-between;
+}
+
+.jc-sa {
+    justify-content: space-around;
+}
+
+.pad15 {
+    padding: 15px;
+}
+
+.sub-heading {
+    border-bottom: 1px solid darkblue;
+    color: darkblue;
+}
+
+.rm-margin {
+    margin: 0%;
+}
+
+.resume-border {
+    border: 3px solid blue;
+    padding: 20px;
+    margin: 20px;
+}
+
+.icon {
+    height: 15px;
+    width: 15px;
 }
 
 .my-page-header {
     grid-area: nav-header;
-    background-color: red;
-    height: 50px;
+    /* background-color: red; */
+    height: fit-content;
     padding: 10px;
 }
 
 .my-page-body {
     grid-area: main-body;
-    background-color: blue;
+    /* background-color: blue; */
     height: fit-content;
     padding: 10px;
 }
 
 .my-page-sidebar {
     grid-area: nav-side;
-    background-color: green;
+    /* background-color: green; */
     padding: 10px;
 }
 
 .my-page-footer {
     grid-area: footer;
-    background-color: yellow;
+    /* background-color: yellow; */
     height: 100px;
     padding: 10px;
 }
-
+/* 
 .my-page {
     display: grid;
     grid-template-columns: 10fr 1fr 3fr;
@@ -47,4 +100,13 @@ body {
         "main-body   main-body   nav-side"
         "footer      footer      footer";
 }
+ */
 
+ .my-page {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-areas:
+        "nav-header nav-side"
+        "main-body  nav-side"
+        "footer     footer";
+}
